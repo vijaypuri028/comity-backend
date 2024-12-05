@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { MONGO_URI } from "../backend/envData.js";
+import { MONGO_URI } from "./envData";
 
 const dbConnect = async () => {
     try {
