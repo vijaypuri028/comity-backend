@@ -7,6 +7,8 @@ import { contactRouter } from './router/contact.router.js'
 import { socialMediaRouter } from './router/socialMedia.router.js'
 import { navRouter } from './router/navbar.router.js'
 import { carouselRouter } from './router/carousel.router.js'
+import dotenv from 'dotenv';
+dotenv.config();
 
 const PORT = 4000
 
