@@ -1,5 +1,5 @@
-import { error, success } from "../../backend/util/responseWrapper.js"
-import { Industry } from '../../backend/model/Industry.model.js'
+import { error, success } from "../util/responseWrapper.js"
+import { Industry } from '../model/Industry.model.js'
 
 const getAllShowIndustryController = async ( req, res ) => {
     try {

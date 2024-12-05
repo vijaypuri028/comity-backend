@@ -1,6 +1,6 @@
 import { Router } from 'express'
-import { requireUser } from '../../backend/middleware/requireUser.middleware.js'
-import { upload } from '../../backend/middleware/multer.middleware.js'
+import { requireUser } from '../middleware/requireUser.middleware.js'
+import { upload } from '../middleware/multer.middleware.js'
 // import 
 
 const router = Router()

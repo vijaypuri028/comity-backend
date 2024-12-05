@@ -1,12 +1,13 @@
 import express from 'express'
 import cors from 'cors'
 import morgan from 'morgan'
-import { CORS_ORIGIN } from '../backend/envData.js'
-
+// import { CORS_ORIGIN } from '../backend/envData.js'
+import dotenv from 'dotenv';
+dotenv.config();
 const app = express()
 
 app.use(cors({
-    origin: CORS_ORIGIN,
+    origin: process.env.CORS_ORIGIN,
     credentials: true
 }))
 

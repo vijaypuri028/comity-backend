@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { requireUser } from "../../backend/middleware/requireUser.middleware.js";
-import { createNavRoute, updateNavRoute, getAllNavRoutes, getAllShowNavRoutes } from "../../backend/controller/navbar.controller.js";
+import { requireUser } from "../middleware/requireUser.middleware.js";
+import { createNavRoute, updateNavRoute, getAllNavRoutes, getAllShowNavRoutes } from "../controller/navbar.controller.js";
 
 const router = Router();
 

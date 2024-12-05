@@ -1,4 +1,4 @@
-import { error, success } from "../../backend/util/responseWrapper.js";
+import { error, success } from "../util/responseWrapper.js";
 import { SocialMedia } from "../model/SocialMedia.model.js";
 
 const createSocialMediaController = async (req, res) => {

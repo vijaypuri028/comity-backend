@@ -1,4 +1,4 @@
-import { error, success } from "../../backend/util/responseWrapper.js"
+import { error, success } from "../util/responseWrapper.js"
 import { Navbar } from "../model/Navbar.model.js";
 
 const getAllNavRoutes = async (req, res) => {

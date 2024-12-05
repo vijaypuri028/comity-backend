@@ -1,5 +1,5 @@
-import { error, success } from "../../backend/util/responseWrapper.js"
-import { About } from "../../backend/model/About.model.js";
+import { error, success } from "../util/responseWrapper.js"
+import { About } from "../model/About.model.js";
 
 
 const createAboutController = async ( req, res ) => {

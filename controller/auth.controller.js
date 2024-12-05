@@ -1,8 +1,8 @@
-import { User } from '../../backend/model/User.model.js'
+import { User } from '../model/User.model.js'
 import bcryptjs from 'bcryptjs'
 import jwt from 'jsonwebtoken'
-import { error, success } from '../../backend/util/responseWrapper.js'
-import { ACCESS_TOKE_PRIVATE_KEY } from '../../backend/envData.js'
+import { error, success } from '../util/responseWrapper.js'
+// import { ACCESS_TOKE_PRIVATE_KEY } from '../envData.js'
 
 
 const signupController = async (req, res) => {
@@ -68,7 +68,7 @@ const loginController = async (req, res) => {
 
 
 const generateAccessToken = ( credential ) => {
-    const token = jwt.sign(credential, ACCESS_TOKE_PRIVATE_KEY, {
+    const token = jwt.sign(credential, process.env.ACCESS_TOKE_PRIVATE_KEY, {
         expiresIn: "30d"
     });
     return token

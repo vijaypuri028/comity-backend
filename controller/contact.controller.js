@@ -1,4 +1,4 @@
-import { error, success } from "../../backend/util/responseWrapper.js";
+import { error, success } from "../util/responseWrapper.js";
 import { Contact } from "../model/Contact.model.js";
 
 const createContactController = async (req, res) => {

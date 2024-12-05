@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken'
-import { error } from '../../backend/util/responseWrapper.js';
-import { ACCESS_TOKE_PRIVATE_KEY } from '../../backend/envData.js';
+import { error } from '../util/responseWrapper.js';
+// import { ACCESS_TOKE_PRIVATE_KEY } from '../envData.js';
 
 const requireUser = async ( req, res, next ) => {
     if (!req.headers ||
@@ -13,7 +13,7 @@ const requireUser = async ( req, res, next ) => {
     const accessToken = req.headers.authorization.split(" ")[1];
 
     try {
-        const verifiedToken = jwt.verify(accessToken, ACCESS_TOKE_PRIVATE_KEY);
+        const verifiedToken = jwt.verify(accessToken, process.env.ACCESS_TOKE_PRIVATE_KEY);
         req._id = verifiedToken._id;
 
     } catch (err) {
