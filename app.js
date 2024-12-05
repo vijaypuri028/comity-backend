@@ -6,10 +6,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 const app = express()
 
-app.use(cors({
-    origin: process.env.CORS_ORIGIN,
-    credentials: true
-}))
+app.use(cors())
 
 app.use(morgan('common'))
 app.use(express.urlencoded({ extended: false }))
